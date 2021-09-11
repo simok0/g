@@ -1,17 +1,18 @@
-const h1 = document.querySelector("div.hello:first-child h1");
+// const loginForm = document.getElementById("login-form");
+// const loginInput = loginForm.querySelector("input");
+// const loginButton = loginForm.querySelector("button"); // 아래의 변수 설정과 동일
+// getElemetById를 쓰면 # 없이도 잘 찾아가지만 querySelector로 찾을 때에는 class는 그냥 써도 되나 id는 # 표시를 달아 줘야 한다.
 
-function handleTitleClick() {
-    const currentColor = h1.style.color;
-    let newColor;
-    if(currentColor === "blue") {
-        newColor = "tomato";
-    } else {
-        newColor = "blue";
+const loginInput = document.querySelector("#login-form input");
+const loginButton = document.querySelector("#login-form button");
+
+function onLoginBtnClick() {
+    const username = loginInput.value;
+    if (username === "") {
+        alert("Please write your name");
+    } else if(username.length > 15) {
+        alert("Your name is too long!");
     }
-    h1.style.color = newColor;
 }
 
-h1.addEventListener("click", handleTitleClick); // 클릭했을 때의 이벤트
-// h1.onclick = handleh1Click;
-
-// https://developer.mozilla.org/en-US/docs/web/api/window - 참고 사이트
+loginButton.addEventListener("click", onLoginBtnClick);

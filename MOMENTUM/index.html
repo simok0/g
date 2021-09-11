@@ -2,15 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Momentum</title>
+    <title>Momentum App</title>
 </head>
 <body>
-    <div class="hello">
-    <h1>Grab me!</h1>
-    </div>
+    <form id="login-form">
+        <input 
+        required
+        maxlength="15"
+        type="text" 
+        placeholder="What is your name?" /> 
+        <!--required: 빈 칸 채우라고 경고창 띄우기
+            placeholder: 회색 글씨로 흐리게 텍스트 표시-->
+<!--        <button>Log In</button> -->
+            <input type="submit" value="Log In" />
+    </form>
     <script src="app.js"></script>
 </body>
 </html>
